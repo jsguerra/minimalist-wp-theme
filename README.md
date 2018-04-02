@@ -1,2 +1,2 @@
-# minimalist-wp-theme
+# Minimalist WP Theme
 A minimalist WordPress theme for a personal blog.
