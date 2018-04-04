@@ -11,13 +11,11 @@
 	margin-right: auto;
 }
 
-// Clear fix
+// Clearfix
 @mixin clearfix() {
-  &::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
+	content: "";
+	display: table;
+	table-layout: fixed;
 }
 
 // Clear after (not all clearfix need this also)
@@ -25,8 +23,7 @@
 	clear: both;
 }
 
-@mixin breakpoint($device-width) {
-  @media screen and (max-width: $device-width) {
-    @content 
-  }
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
