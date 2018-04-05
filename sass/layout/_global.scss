@@ -1,0 +1,7 @@
+.site-content {
+    padding: 1em;
+
+    @include breakpoint($size__tablet) {
+        padding: 2em;
+    }
+}
