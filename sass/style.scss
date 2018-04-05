@@ -1,6 +1,6 @@
 /*!
 Theme Name: minimalist wp
-Theme URI: https://github.com/jsguerra/minimalist-wp-theme.git
+Theme URI: http://underscores.me/
 Author: Jose Guerra
 Author URI: https://joseguerra.uk
 Description: A minimalist WordPress theme for a personal blog.
@@ -16,13 +16,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 minimalist wp is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Bootstrap Reboot is used to reset the site styles.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Bootstrap Reboot
+# Normalize
 # Typography
 # Elements
 # Forms
@@ -47,7 +48,7 @@ Bootstrap Reboot is used to reset the site styles.
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import "bootstrap-reboot";
+@import "normalize";
 
 /*--------------------------------------------------------------
 # Typography

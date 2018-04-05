@@ -120,9 +120,7 @@ add_action( 'widgets_init', 'minimalist_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function minimalist_wp_scripts() {
-	wp_enqueue_style( 'minimalist-wp-reboot', get_template_directory_uri() . '/css/bootstrap-reboot.min.css' );
-	
-	wp_enqueue_style( 'minimalist-wp-style', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'minimalist-wp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'minimalist-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
