@@ -84,6 +84,56 @@ endif;
 add_action( 'after_setup_theme', 'minimalist_wp_setup' );
 
 /**
+ * Register custom fonts.
+ */
+function minimalist_wp_fonts_url() {
+	$fonts_url = '';
+
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Open Sans, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$open_sans = _x( 'on', 'Open Sans font: on or off', 'minimalist_wp' );
+
+	if ( 'off' !== $open_sans ) {
+		$font_families = array();
+
+		$font_families[] = 'Open Sans:400,400i';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function minimalist_wp_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'minimalist_wp-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'minimalist_wp_resource_hints', 10, 2 );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -120,6 +170,9 @@ add_action( 'widgets_init', 'minimalist_wp_widgets_init' );
  * Enqueue scripts and styles.
  */
 function minimalist_wp_scripts() {
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'minimalist-wp-fonts', minimalist_wp_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'minimalist-wp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'minimalist-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
