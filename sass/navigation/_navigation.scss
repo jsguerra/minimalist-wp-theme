@@ -1,7 +1,25 @@
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-@import "links";
+.site-header {
+    font-size: 1em;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .site-title {
+        font-size: 1em;
+        margin: 0.5em 0;
+    }
+}
 
 /*--------------------------------------------------------------
 ## Menus

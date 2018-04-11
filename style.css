@@ -643,39 +643,38 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-	color: royalblue;
+.site-header {
+	font-size: 1em;
+	background-color: cornflowerblue;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 0 1rem;
 }
 
-a:visited {
-	color: purple;
+.site-header a {
+	color: white;
+	text-decoration: none;
 }
 
-a:hover, a:focus, a:active {
-	color: midnightblue;
+.site-header a:hover {
+	color: white;
 }
 
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover, a:active {
-	outline: 0;
+.site-header .site-title {
+	font-size: 1em;
+	margin: 0.5em 0;
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
-
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -838,8 +837,6 @@ a:hover, a:active {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -852,7 +849,6 @@ a:hover, a:active {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
@@ -884,6 +880,11 @@ a:hover, a:active {
 	.site-content {
 		padding: 2em;
 	}
+}
+
+.content-area {
+	max-width: 700px;
+	margin: auto;
 }
 
 /*--------------------------------------------------------------
