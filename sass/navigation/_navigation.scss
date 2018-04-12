@@ -1,27 +1,22 @@
 .site-header {
-    font-size: 1em;
-    background-color: cornflowerblue;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
+    margin-bottom: 6rem;
+    padding: 1rem;
+    border-bottom: 1px solid $color__border-nav;
 
-    a {
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-            color: white;
-        }
+    .container {
+        display: flex;
+        justify-content: space-between;
     }
+
 
     .site-title {
         font-size: 1em;
-        margin: 0.5em 0;
+        margin: 0;
     }
 }
 
 /*--------------------------------------------------------------
-## Menus
+## Menus and links
 --------------------------------------------------------------*/
+@import "links";
 @import "menus";

@@ -22,30 +22,33 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'minimalist-wp' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<?php
-		the_custom_logo();
-		if ( is_front_page() && is_home() ) :
-			?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="container">
 			<?php
-		else :
-			?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-		endif; ?>
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif; ?>
 
-		<nav id="site-navigation" class="main-navigation">
-			<a class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span>H</span></a>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation">
+				<a class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span>H</span></a>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+			</nav><!-- #site-navigation -->
+		</div><!-- .container -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

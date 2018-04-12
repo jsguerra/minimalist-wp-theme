@@ -357,16 +357,36 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: "Crimson Text", Georgia, Times, Times New Roman, serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Crimson Text", Georgia, Times, Times New Roman, serif;
+	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	clear: both;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1.05em;
+}
+
+h2 {
+	font-size: 2.25em;
+	line-height: 2.25em;
+}
+
+h3 {
+	font-size: 1.75em;
+	line-height: 1.25em;
+}
+
+h4 {
+	font-size: 1.125em;
+	line-height: 1.22222222em;
 }
 
 p {
@@ -576,37 +596,48 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 .site-header {
-	font-size: 1em;
-	background-color: cornflowerblue;
+	margin-bottom: 6rem;
+	padding: 1rem;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.site-header .container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	padding: 0 1rem;
-}
-
-.site-header a {
-	color: white;
-	text-decoration: none;
-}
-
-.site-header a:hover {
-	color: white;
 }
 
 .site-header .site-title {
 	font-size: 1em;
-	margin: 0.5em 0;
+	margin: 0;
 }
 
 /*--------------------------------------------------------------
-## Menus
+## Menus and links
 --------------------------------------------------------------*/
+a {
+	color: #297cbb;
+}
+
+a:visited {
+	color: #297cbb;
+}
+
+a:hover, a:focus, a:active {
+	color: #4699d9;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -646,6 +677,7 @@ textarea {
 .main-navigation li {
 	float: left;
 	position: relative;
+	margin-right: 1rem;
 }
 
 .main-navigation a {
@@ -661,7 +693,7 @@ textarea {
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
-		display: none;
+		display: none !important;
 	}
 	.main-navigation ul {
 		display: block;
@@ -789,21 +821,17 @@ textarea {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-	/* Make sure select elements fit in widgets. */
-}
-
-.widget select {
-	max-width: 100%;
-}
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
 .site-content {
 	padding: 0 1em;
 }
@@ -843,6 +871,16 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-header {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.entry-header .entry-meta {
+	font-size: 0.9rem;
+	margin: 1rem 0;
 }
 
 /*--------------------------------------------------------------
