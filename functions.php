@@ -91,15 +91,23 @@ function minimalist_wp_fonts_url() {
 
 	/*
 	 * Translators: If there are characters in your language that are not
-	 * supported by Open Sans, translate this to 'off'. Do not translate
+	 * supported by Open Sans and Crimson Text, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$open_sans = _x( 'on', 'Open Sans font: on or off', 'minimalist_wp' );
+	$crimson_text = _x( 'on', 'Crimson Text font: on or off', 'minimalist_wp' );
+
+	$font_families = array();
 
 	if ( 'off' !== $open_sans ) {
-		$font_families = array();
-
 		$font_families[] = 'Open Sans:400,400i';
+	}
+
+	if ( 'off' !== $crimson_text ) {
+		$font_families[] = 'Crimson Text';
+	}
+
+	if ( in_array( 'on', array($crimson_text, $open_sans) ) ) {
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
