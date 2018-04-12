@@ -358,8 +358,8 @@ optgroup,
 textarea {
 	color: #404040;
 	font-family: "Crimson Text", Georgia, Times, Times New Roman, serif;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 21px;
+	font-size: 1.3125rem;
 	line-height: 1.5;
 }
 
@@ -408,8 +408,8 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 19.6875px;
+	font-size: 1.23047rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -419,8 +419,8 @@ pre {
 
 code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 19.6875px;
+	font-size: 1.23047rem;
 }
 
 abbr, acronym {
@@ -435,6 +435,10 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+blockquote {
+	border-left: 6px solid cornflowerblue;
 }
 
 /*--------------------------------------------------------------
@@ -520,8 +524,8 @@ input[type="submit"] {
 	border-radius: 3px;
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 15.75px;
+	font-size: 0.98438rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
 }
@@ -596,18 +600,16 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 .site-header {
-	margin-bottom: 6rem;
-	padding: 1rem;
-	border-bottom: 1px solid #e4e4e4;
-}
-
-.site-header .container {
+	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	margin: 0 1rem 6rem;
+	padding: 0.5rem 0.25rem;
+	border-bottom: 3px solid cornflowerblue;
 }
 
 .site-header .site-title {
@@ -751,8 +753,8 @@ a:hover, a:active {
 	        clip-path: none;
 	color: #21759b;
 	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 18.375px;
+	font-size: 1.14844rem;
 	font-weight: bold;
 	height: auto;
 	left: 5px;

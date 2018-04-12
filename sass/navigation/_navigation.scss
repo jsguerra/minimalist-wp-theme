@@ -1,13 +1,10 @@
 .site-header {
-    margin-bottom: 6rem;
-    padding: 1rem;
-    border-bottom: 1px solid $color__border-nav;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-    }
-
+    font-family: $font__main;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem 6rem;
+    padding: 0.5rem 0.25rem;
+    border-bottom: 3px solid $color__border-nav;
 
     .site-title {
         font-size: 1em;
