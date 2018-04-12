@@ -16,6 +16,13 @@
 	margin: 1.5em 0 0;
 }
 
+.page-content,
+.entry-content,
+.comments-area {
+	max-width: 700px;
+	margin: auto;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -26,8 +33,12 @@
 	text-align: center;
 
 	.entry-meta {
-		font-size: 0.9rem;
+		font-size: 1rem;
+		font-style: italic;
 		margin: 1rem 0;
 	}
 }
 
+.entry-footer {
+	text-align: center;
+}
