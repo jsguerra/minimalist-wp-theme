@@ -2,24 +2,24 @@
 .posts-navigation,
 .post-navigation,
 .paging-navigation {
-	padding: 2em 0;
+	padding: 0;
 	//font-family: $font__sans;
 	text-align: left;
 	overflow: hidden;
+	border-top: 1px solid #e4e4e4;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #e4e4e4;
 	
 	a {
 		display: block;
 		width: 100%;
 		text-decoration: none;
 		padding: 1em;
-		border: 1px solid $color__border-nav;
 		color: black;
 		
 		&:hover,
 		&:focus {
-			color: white;
-			border-color: $color__border-nav;
-			background: $color__border-nav;
+
 		}
 	}
 	
@@ -75,19 +75,14 @@
 		display: block;
 	}
 	
-	@media screen and (min-width: 30em) {
-		padding-bottom: 1em;
-	}
-	
 	.post-title {
 		font-size: 1.2em;
-		font-weight: 700;
-		border-bottom: 3px solid $color__border-nav;
+		
 	}
 	
 	a:hover .post-title,
 	a:focus .post-title{
-		border-bottom-color: white;
+		border-bottom: 2px solid $color__border-nav;
 	}
 	
 }

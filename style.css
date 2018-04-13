@@ -530,6 +530,7 @@ input[type="submit"] {
 	font-size: 0.98438rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
+	cursor: pointer;
 }
 
 button:hover, button:active, button:focus,
@@ -733,9 +734,12 @@ a:hover, a:active {
 .posts-navigation,
 .post-navigation,
 .paging-navigation {
-	padding: 2em 0;
+	padding: 0;
 	text-align: left;
 	overflow: hidden;
+	border-top: 1px solid #e4e4e4;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #e4e4e4;
 }
 
 .comment-navigation a,
@@ -746,20 +750,7 @@ a:hover, a:active {
 	width: 100%;
 	text-decoration: none;
 	padding: 1em;
-	border: 1px solid cornflowerblue;
 	color: black;
-}
-
-.comment-navigation a:hover, .comment-navigation a:focus,
-.posts-navigation a:hover,
-.posts-navigation a:focus,
-.post-navigation a:hover,
-.post-navigation a:focus,
-.paging-navigation a:hover,
-.paging-navigation a:focus {
-	color: white;
-	border-color: cornflowerblue;
-	background: cornflowerblue;
 }
 
 .nav-links {
@@ -775,21 +766,13 @@ a:hover, a:active {
 	display: block;
 }
 
-@media screen and (min-width: 30em) {
-	.post-navigation {
-		padding-bottom: 1em;
-	}
-}
-
 .post-navigation .post-title {
 	font-size: 1.2em;
-	font-weight: 700;
-	border-bottom: 3px solid cornflowerblue;
 }
 
 .post-navigation a:hover .post-title,
 .post-navigation a:focus .post-title {
-	border-bottom-color: white;
+	border-bottom: 2px solid cornflowerblue;
 }
 
 /* Comment Form */
@@ -960,7 +943,23 @@ a:hover, a:active {
 
 .site-main {
 	max-width: 960px;
-	margin: auto;
+	margin: 0 auto 6rem;
+}
+
+.site-footer {
+	font-size: 1rem;
+	background-color: #297cbb;
+	color: white;
+	padding: 2rem 0;
+	text-align: center;
+}
+
+.site-footer a {
+	color: white;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1007,6 +1006,11 @@ a:hover, a:active {
 	margin: 1rem 0;
 }
 
+.post,
+.post-thumbnail {
+	margin-bottom: 3rem;
+}
+
 .entry-footer {
 	text-align: center;
 }
@@ -1014,12 +1018,170 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+	width: 100%;
+}
+
+.comments-title {
+	margin-bottom: 2em;
+	text-align: center;
+	border-bottom: 3px solid cornflowerblue;
+}
+
+.comment-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.comment-list ol {
+	list-style-type: none;
+}
+
+.comment-body {
+	border-bottom: 1px solid cornflowerblue;
+	margin-bottom: 3em;
+}
+
+.comment-meta {
+	position: relative;
+	margin-left: 70px;
+	font-size: 80%;
+}
+
+.comment-meta a,
+.comment-form a {
+	text-decoration: none;
+	border: none;
+}
+
+.comment-meta a:hover, .comment-meta a:focus,
+.comment-form a:hover,
+.comment-form a:focus {
+	text-decoration: underline;
+}
+
+.comment .avatar {
+	position: absolute;
+	top: -5px;
+	left: -70px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+}
+
+.children {
+	margin-left: 1em;
+	padding-left: 0;
+}
+
+.comment-metadata {
+	margin-top: .2em;
+	padding-bottom: .5em;
+	font-size: .8em;
+	line-height: 1em;
+}
+
+.comment-metadata a {
+	color: #7D7D7D;
+}
+
+.comment-metadata a:hover, .comment-metadata a:focus {
+	border-color: #c3c3c3;
+}
+
+.comment-author {
+	font-size: 1.4em;
+	line-height: 1.3em;
+}
+
+.says {
+	font-size: 80%;
+}
+
+.reply {
+	margin-bottom: 1.5em;
+	text-align: right;
+}
+
+.reply a {
+	display: inline-block;
+	padding: .5em 1.4em;
+	font-size: 85%;
+	color: #000;
+	line-height: 1.3em;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+	border-radius: 3px;
+}
+
+.reply a:hover, .reply a:focus {
+	color: #fff;
+	background: #297cbb;
+	border-color: #297cbb;
+}
+
+.comment-content ol {
+	list-style-type: decimal;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
-.bypostauthor {
+.bypostauthor .avatar {
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
+	border: 3px solid #297cbb;
+	margin-top: -3px;
+	margin-left: -3px;
+}
+
+/* Comment Form */
+.comment-reply-title {
+	margin-bottom: 1em;
+}
+
+.comment-list .comment-reply-title {
+	text-align: left;
+}
+
+.comment-form {
+	line-height: 1.3em;
+}
+
+.comment-form a {
+	font-weight: 500;
+}
+
+.comment-form .form-submit {
+	text-align: right;
+}
+
+.comment-form .form-submit input {
+	padding: .5em 1.4em;
+	font-size: 85%;
+	color: #000;
+	line-height: 1.3em;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+}
+
+.comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
+	color: #fff;
+	background: #297cbb;
+	border-color: #297cbb;
+}
+
+.comment-form label {
+	width: 33%;
 	display: block;
+	font-style: italic;
+	padding-bottom: .4em;
+}
+
+.comment-form .required {
+	color: #D54E21;
 }
 
 /*--------------------------------------------------------------

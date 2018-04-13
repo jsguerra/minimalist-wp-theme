@@ -8,5 +8,21 @@
 
 .site-main {
     max-width: 960px;
-    margin: auto;
+    margin: 0 auto 6rem;
+}
+
+.site-footer {
+    font-size: 1rem;
+    background-color: $color__link;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+
+    a {
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
