@@ -127,7 +127,7 @@ if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('full'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -146,3 +146,17 @@ if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+/**
+ * Post navigation (previous / next post) for single posts.
+ */
+function minimalist_wp_post_navigation() {
+	the_post_navigation( array(
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'humescores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'humescores' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'humescores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'humescores' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+	) );
+}
