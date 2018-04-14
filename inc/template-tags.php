@@ -152,11 +152,11 @@ endif;
  */
 function minimalist_wp_post_navigation() {
 	the_post_navigation( array(
-		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'humescores' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Next post:', 'humescores' ) . '</span> ' .
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'minimalist_wp' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'minimalist_wp' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
-		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'humescores' ) . '</span> ' .
-			'<span class="screen-reader-text">' . __( 'Previous post:', 'humescores' ) . '</span> ' .
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'minimalist_wp' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'minimalist_wp' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 	) );
 }

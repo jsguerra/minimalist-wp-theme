@@ -708,38 +708,14 @@ a:hover, a:active {
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation,
 .paging-navigation {
+	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
 	padding: 0;
 	text-align: left;
 	overflow: hidden;
-	border-top: 1px solid #e4e4e4;
-	background-color: #f9f9f9;
-	border-bottom: 1px solid #e4e4e4;
 }
 
 .comment-navigation a,
@@ -753,13 +729,26 @@ a:hover, a:active {
 	color: black;
 }
 
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous,
+.paging-navigation .nav-previous {
+	float: left;
+	width: 45%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next,
+.paging-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 45%;
+}
+
 .nav-links {
 	margin: 0 auto;
 	padding: 0 .4em;
-}
-
-.nav-previous {
-	padding-bottom: 1em;
 }
 
 .post-navigation .meta-nav {
@@ -767,63 +756,12 @@ a:hover, a:active {
 }
 
 .post-navigation .post-title {
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 .post-navigation a:hover .post-title,
 .post-navigation a:focus .post-title {
 	border-bottom: 2px solid cornflowerblue;
-}
-
-/* Comment Form */
-.comment-reply-title {
-	margin-bottom: 1em;
-}
-
-.comment-list .comment-reply-title {
-	text-align: left;
-}
-
-.comment-form {
-	line-height: 1.3em;
-}
-
-.comment-form a {
-	font-weight: 500;
-}
-
-.comment-form p {
-	margin: 0 0 1rem 0;
-}
-
-.comment-form .form-submit {
-	text-align: right;
-}
-
-.comment-form .form-submit input {
-	padding: .5em 1.4em;
-	font-size: 85%;
-	color: #000;
-	line-height: 1.3em;
-	text-decoration: none;
-	border: 1px solid #c3c3c3;
-}
-
-.comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
-	color: #fff;
-	background: #297cbb;
-	border-color: #297cbb;
-}
-
-.comment-form label {
-	width: 33%;
-	display: block;
-	font-style: italic;
-	padding-bottom: .4em;
-}
-
-.comment-form .required {
-	color: #D54E21;
 }
 
 /*--------------------------------------------------------------
@@ -1152,6 +1090,10 @@ a:hover, a:active {
 
 .comment-form a {
 	font-weight: 500;
+}
+
+.comment-form p {
+	margin: 0 0 1rem 0;
 }
 
 .comment-form .form-submit {

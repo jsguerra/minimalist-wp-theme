@@ -196,8 +196,6 @@
 }
 
 /* Comment Form */
-
-
 .comment-reply-title {
 	margin-bottom: 1em;
 }
@@ -207,11 +205,14 @@
 }
 
 .comment-form {
-	// font-family: $font__sans;
 	line-height: 1.3em;
 	
 	a {
 		font-weight: 500;
+	}
+
+	p {
+		margin: 0 0 1rem 0;
 	}
 	
 	.form-submit {
@@ -246,4 +247,3 @@
 		color: #D54E21;
 	}
 }
-
