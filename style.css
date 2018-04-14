@@ -366,27 +366,28 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-weight: 400;
+	margin-bottom: 1rem;
 	clear: both;
 }
 
 h1 {
 	font-size: 3em;
-	line-height: 1.05em;
+	line-height: 1.1em;
 }
 
 h2 {
 	font-size: 2.25em;
-	line-height: 2.25em;
+	line-height: 1.1em;
 }
 
 h3 {
 	font-size: 1.75em;
-	line-height: 1.25em;
+	line-height: 1.1em;
 }
 
 h4 {
 	font-size: 1.125em;
-	line-height: 1.22222222em;
+	line-height: 1.1em;
 }
 
 p {
@@ -690,7 +691,6 @@ a:hover, a:active {
 	font-size: 0.9rem;
 	display: block;
 	text-decoration: none;
-	text-transform: uppercase;
 }
 
 /* Small menu. */
@@ -713,6 +713,7 @@ a:hover, a:active {
 .post-navigation,
 .paging-navigation {
 	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+	margin-bottom: 3rem;
 	padding: 0;
 	text-align: left;
 	overflow: hidden;
@@ -752,11 +753,12 @@ a:hover, a:active {
 }
 
 .post-navigation .meta-nav {
+	font-size: 0.9em;
 	display: block;
 }
 
 .post-navigation .post-title {
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 .post-navigation a:hover .post-title,
@@ -934,14 +936,29 @@ a:hover, a:active {
 }
 
 .entry-header {
-	margin-bottom: 3rem;
+	margin-bottom: 2.75rem;
 	text-align: center;
+}
+
+.entry-header .cat-links {
+	font-family: "Open Sans", Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	display: block;
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+}
+
+.entry-header .entry-title {
+	margin-bottom: 1.25rem;
 }
 
 .entry-header .entry-meta {
 	font-size: 1rem;
-	font-style: italic;
 	margin: 1rem 0;
+}
+
+.entry-header .entry-meta .updated-on {
+	display: block;
 }
 
 .post,
@@ -953,6 +970,39 @@ a:hover, a:active {
 	text-align: center;
 }
 
+.entry-footer .tags-links {
+	margin-right: 1rem;
+}
+
+.author-section {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: #f2f5f8;
+	margin-bottom: 3rem;
+	padding: 2rem;
+}
+
+.author-section .author-avatar {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 125px;
+	        flex: 1 0 125px;
+}
+
+.author-section .author-avatar img {
+	border-radius: 50px;
+}
+
+.author-section .author-description p {
+	margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -961,9 +1011,11 @@ a:hover, a:active {
 }
 
 .comments-title {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
+	padding: 1.5rem 0;
 	text-align: center;
-	border-bottom: 3px solid cornflowerblue;
+	border-bottom: 2px solid #f2f5f8;
+	border-top: 2px solid #f2f5f8;
 }
 
 .comment-list {
@@ -977,7 +1029,7 @@ a:hover, a:active {
 }
 
 .comment-body {
-	border-bottom: 1px solid cornflowerblue;
+	border-bottom: 1px solid #f2f5f8;
 	margin-bottom: 3em;
 }
 

@@ -13,6 +13,7 @@
 .post-navigation,
 .paging-navigation {
 	font-family: $font__main;
+	margin-bottom: 3rem;
 	padding: 0;
 	text-align: left;
 	overflow: hidden;
@@ -53,11 +54,12 @@
 .post-navigation {
 	
 	.meta-nav {
+		font-size: 0.9em;
 		display: block;
 	}
 	
 	.post-title {
-		font-size: 1.1em;
+		font-size: 1em;
 		
 	}
 	

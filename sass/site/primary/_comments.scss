@@ -11,9 +11,12 @@
 }
 
 .comments-title {
-	margin-bottom: 2em;
+	//background-color: $color__background-offwhite;
+	margin-bottom: 1em;
+	padding: 1.5rem 0;
 	text-align: center;
-	border-bottom: 3px solid $color__border-nav;
+	border-bottom: 2px solid $color__background-offwhite;
+	border-top: 2px solid $color__background-offwhite;
 }
 
 .comment-list {
@@ -27,7 +30,7 @@
 }
 
 .comment-body {
-	border-bottom: 1px solid $color__border-nav;
+	border-bottom: 1px solid $color__background-offwhite;
 	margin-bottom: 3em;
 }
 

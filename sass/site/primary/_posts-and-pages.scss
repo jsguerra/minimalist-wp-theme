@@ -29,13 +29,28 @@
 }
 
 .entry-header {
-	margin-bottom: 3rem;
+	margin-bottom: 2.75rem;
 	text-align: center;
+
+	.cat-links {
+		font-family: $font__main;
+		font-size: 1rem;
+		display: block;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+	}
+
+	.entry-title {
+		margin-bottom: 1.25rem;
+	}
 
 	.entry-meta {
 		font-size: 1rem;
-		font-style: italic;
 		margin: 1rem 0;
+
+		.updated-on {
+			display: block;
+		}
 	}
 }
 
@@ -46,4 +61,33 @@
 
 .entry-footer {
 	text-align: center;
+
+	.tags-links {
+		margin-right: 1rem;
+	}
+}
+
+// Author Bio Section
+.author-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $color__background-offwhite;
+	margin-bottom: 3rem;
+	padding: 2rem;
+
+	.author-avatar {
+		flex: 1 0 125px;
+
+		img {
+			border-radius: 50px;
+		}
+	}
+
+	.author-description {
+
+		p {
+			margin-bottom: 0;
+		}
+	}
 }

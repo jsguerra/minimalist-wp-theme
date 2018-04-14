@@ -15,6 +15,7 @@ if ( ! function_exists( 'minimalist_wp_posted_on' ) ) :
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_updated = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -26,12 +27,27 @@ if ( ! function_exists( 'minimalist_wp_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'minimalist-wp' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			esc_html_x( 'Published %s', 'post date', 'minimalist-wp' ),
+			$time_string
 		);
 
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	}
+endif;
 
+if ( ! function_exists( 'minimalist_wp_updated_on' )) :
+	/**
+	 * Prints HTML with meta information for the updated post-date/time.
+	 */
+	function minimalist_wp_updated_on() {
+		$time_modified = '%2$s';
+		$time_modified = sprintf( $time_modified,
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			echo '<span class="updated-on">Updated ' . $time_modified . '</span>';
+		}
 	}
 endif;
 
@@ -58,13 +74,6 @@ if ( ! function_exists( 'minimalist_wp_entry_footer' ) ) :
 	function minimalist_wp_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'minimalist-wp' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'minimalist-wp' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'minimalist-wp' ) );
 			if ( $tags_list ) {
@@ -110,6 +119,15 @@ if ( ! function_exists( 'minimalist_wp_entry_footer' ) ) :
 		);
 	}
 endif;
+
+function minimalist_wp_category() {
+	/* translators: used between list items, there is a space after the comma */
+	$categories_list = get_the_category_list( esc_html__( ', ', 'minimalist-wp' ) );
+	if ( $categories_list ) {
+		/* translators: 1: list of categories. */
+		printf( '<span class="cat-links">' . esc_html__( '%1$s', 'minimalist-wp' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+	}
+}
 
 if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 	/**

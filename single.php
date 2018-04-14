@@ -18,6 +18,11 @@ get_header();
 
 		get_template_part( 'template-parts/content', get_post_type() );
 
+		// Get the Author bio
+		if ( is_single() && get_the_author_meta( 'description' ) ) :
+			get_template_part( 'template-parts/author-bio' );
+		endif;
+
 		// the_post_navigation();
 		minimalist_wp_post_navigation();
 		
