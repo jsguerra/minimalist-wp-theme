@@ -75,6 +75,21 @@
 	display: block;
 }
 
+.menu-toggle {
+	border: 0;
+
+	&:focus {
+		border: 0;
+	}
+
+	div {
+		width: 35px;
+		height: 4px;
+		background-color: $color__link;
+		margin: 6px 0;
+	}
+}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none!important;

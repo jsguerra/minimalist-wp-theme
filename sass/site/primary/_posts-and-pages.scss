@@ -59,6 +59,17 @@
 	margin-bottom: 3rem;
 }
 
+.home {
+	
+	.post {
+		margin-bottom: 0;
+
+		@include breakpoint($size__tablet) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
 .entry-footer {
 	text-align: center;
 
@@ -70,11 +81,16 @@
 // Author Bio Section
 .author-section {
 	display: flex;
+	flex-flow: column;
 	justify-content: space-between;
 	align-items: center;
 	background-color: $color__background-offwhite;
 	margin-bottom: 3rem;
 	padding: 2rem;
+
+	@include breakpoint($size__tablet) {
+		flex-flow: row;
+	}
 
 	.author-avatar {
 		flex: 1 0 125px;

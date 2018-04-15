@@ -41,9 +41,13 @@
 			align-items: center;
 
 			.nav-arrow {
-				font-size: 4rem;
+				font-size: 2rem;
 				line-height: 1;
 				width: 45px;
+
+				@include breakpoint($size__tablet) {
+					font-size: 4rem;
+				}
 			}
 		}
 	}
@@ -56,9 +60,13 @@
 			justify-content: flex-end;
 
 			.nav-arrow {
-				font-size: 4rem;
+				font-size: 2rem;
 				line-height: 1;
-				width: 45px;
+				width: 30px;
+
+				@include breakpoint($size__tablet) {
+					font-size: 4rem;
+				}
 			}
 		}
 	}
@@ -80,8 +88,12 @@
 	}
 	
 	.post-title {
+		display: none;
 		font-size: 1em;
 		
+		@include breakpoint($size__tablet) {
+			display: inline;
+		}
 	}
 	
 	a:hover .post-title,

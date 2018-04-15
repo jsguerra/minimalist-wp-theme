@@ -39,7 +39,11 @@
 		endif; ?>
 
 		<nav id="site-navigation" class="main-navigation">
-			<a class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span>H</span></a>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<div></div>
+				<div></div>
+				<div></div>
+			</button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

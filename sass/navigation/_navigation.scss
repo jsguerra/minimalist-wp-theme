@@ -3,9 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 1rem 6rem;
+    margin: 0 1rem 4rem;
     padding: 0.5rem 0.25rem;
     border-bottom: 3px solid $color__border-nav;
+
+    @include breakpoint($size__tablet) {
+        margin: 0 1rem 6rem;
+    }
 
     .site-title {
         font-size: 1em;
