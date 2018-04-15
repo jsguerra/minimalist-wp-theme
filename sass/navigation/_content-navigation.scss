@@ -1,13 +1,3 @@
-// .comment-navigation,
-// .posts-navigation,
-// .post-navigation {
-
-// 	.site-main & {
-// 		margin: 0 0 1.5em;
-// 		overflow: hidden;
-// 	}
-// }
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation,
@@ -41,6 +31,37 @@
 		text-align: right;
 		width: 45%;
 	}	
+}
+
+.single {
+	.nav-previous {
+
+		a {
+			display: flex;
+			align-items: center;
+
+			.nav-arrow {
+				font-size: 4rem;
+				line-height: 1;
+				width: 45px;
+			}
+		}
+	}
+
+	.nav-next {
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			.nav-arrow {
+				font-size: 4rem;
+				line-height: 1;
+				width: 45px;
+			}
+		}
+	}
 }
 
 

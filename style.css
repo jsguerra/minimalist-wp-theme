@@ -653,6 +653,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
+	background-color: white;
 	-webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
@@ -669,7 +670,7 @@ a:hover, a:active {
 
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
-	left: 100%;
+	right: 100%;
 }
 
 .main-navigation ul ul a {
@@ -745,6 +746,39 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 45%;
+}
+
+.single .nav-previous a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.single .nav-previous a .nav-arrow {
+	font-size: 4rem;
+	line-height: 1;
+	width: 45px;
+}
+
+.single .nav-next a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.single .nav-next a .nav-arrow {
+	font-size: 4rem;
+	line-height: 1;
+	width: 45px;
 }
 
 .nav-links {

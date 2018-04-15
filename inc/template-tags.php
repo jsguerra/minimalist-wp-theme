@@ -145,7 +145,7 @@ if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('full'); ?>
+				<?php the_post_thumbnail('featured-img'); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
@@ -170,11 +170,11 @@ endif;
  */
 function minimalist_wp_post_navigation() {
 	the_post_navigation( array(
-		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'minimalist_wp' ) . '</span> ' .
+		'next_text' => '<div><span class="meta-nav" aria-hidden="true">' . __( 'Next', 'minimalist_wp' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Next post:', 'minimalist_wp' ) . '</span> ' .
-			'<span class="post-title">%title</span>',
-		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'minimalist_wp' ) . '</span> ' .
+			'<span class="post-title">%title</span></div><div class="nav-arrow">&rsaquo;</div>',
+		'prev_text' => '<div class="nav-arrow">&lsaquo;</div><div><span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'minimalist_wp' ) . '</span> ' .
 			'<span class="screen-reader-text">' . __( 'Previous post:', 'minimalist_wp' ) . '</span> ' .
-			'<span class="post-title">%title</span>',
+			'<span class="post-title">%title</span></div>',
 	) );
 }
