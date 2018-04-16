@@ -1,6 +1,7 @@
 .site-header {
     font-family: $font__main;
     display: flex;
+    flex-flow: column;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 1rem 4rem;
@@ -8,13 +9,16 @@
     border-bottom: 3px solid $color__border-nav;
 
     @include breakpoint($size__tablet) {
+        flex-flow: row;
         align-items: center;
         margin: 0 1rem 6rem;
     }
 
     .site-title {
+        flex: 1 0;
         font-size: 1em;
         margin: 0;
+        margin-right: auto;
     }
 }
 
