@@ -48,7 +48,7 @@
 	overflow: hidden;
   }
   
-  .menu a {
+  .menu li {
 	float: left;
 	display: block;
 	color: $color__link;
@@ -95,5 +95,11 @@
   }
 
   .menu-toggle {
-	  display: none;
+	display: block;
+	border: 0;
+	outline: 0;
+
+	@include breakpoint($size__tablet) {
+		display: none;
+	}
   }

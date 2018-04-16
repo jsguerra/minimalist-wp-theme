@@ -633,10 +633,10 @@ textarea {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
+	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	    -ms-flex-flow: column;
-	        flex-flow: column;
+	    -ms-flex-flow: row;
+	        flex-flow: row;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
@@ -741,7 +741,7 @@ a:hover, a:active {
 	overflow: hidden;
 }
 
-.menu a {
+.menu li {
 	float: left;
 	display: block;
 	color: #297cbb;
@@ -792,7 +792,15 @@ a:hover, a:active {
 }
 
 .menu-toggle {
-	display: none;
+	display: block;
+	border: 0;
+	outline: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
 }
 
 .comment-navigation,
