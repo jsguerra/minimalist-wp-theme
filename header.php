@@ -39,10 +39,10 @@
 		endif; ?>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-				<div></div>
-				<div></div>
-				<div></div>
+			<button class="menu-toggle menu-1" aria-controls="primary-menu" aria-expanded="false">
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
 			</button>
 			<?php
 			wp_nav_menu( array(

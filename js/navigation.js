@@ -104,3 +104,9 @@
 		}
 	}( container ) );
 } )();
+
+document.querySelector('.menu-toggle')
+		.addEventListener('click', function(e) {
+			e.preventDefault();
+			this.classList.toggle('open');
+}, false);
