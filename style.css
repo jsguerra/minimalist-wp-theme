@@ -718,6 +718,18 @@ a:hover, a:active {
 	transition: 0.5s;
 }
 
+@media screen and (min-width: 768px) {
+	.main-navigation {
+		position: unset;
+		height: auto;
+		background-color: transparent;
+		overflow-y: unset;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+	}
+}
+
 .main-navigation .closebtn {
 	font-size: 60px;
 	line-height: 1;
@@ -725,6 +737,31 @@ a:hover, a:active {
 	top: 0;
 	right: 1rem;
 	color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+	.main-navigation .closebtn {
+		display: none;
+	}
+}
+
+.openbtn {
+	font-size: 30px;
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 1rem;
+	line-height: 1;
+}
+
+.openbtn a {
+	color: #297cbb;
+}
+
+@media screen and (min-width: 768px) {
+	.openbtn {
+		display: none;
+	}
 }
 
 .open-nav {
@@ -747,16 +784,35 @@ a:hover, a:active {
 
 @media screen and (min-width: 768px) {
 	#primary-menu {
+		font-size: 1rem;
+		position: unset;
+		top: unset;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		    -ms-flex-flow: row;
 		        flex-flow: row;
-		height: 100%;
+		height: auto;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin: 0;
 	}
 }
 
 #primary-menu a {
 	color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+	#primary-menu a {
+		color: #297cbb;
+	}
 }
 
 #primary-menu ul {
@@ -777,6 +833,12 @@ a:hover, a:active {
 #primary-menu li {
 	margin-right: 10px;
 	margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	#primary-menu li {
+		margin-bottom: 0;
+	}
 }
 
 #primary-menu li:last-child {

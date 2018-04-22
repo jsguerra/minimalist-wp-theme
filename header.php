@@ -38,7 +38,9 @@
 			<?php
 		endif; ?>
 
-		<nav id="site-navigation" class="main-navigation open-nav">
+		<a class="openbtn" href="#">&#9776;</a>
+
+		<nav id="site-navigation" class="main-navigation">
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'minimalist-wp' ); ?></button> -->
 			<a class="closebtn" href="#">&times;</a>
 			<?php
