@@ -347,6 +347,12 @@ template {
 }
 
 /*# sourceMappingURL=bootstrap-reboot.min.css.map */
+.is-noscroll {
+	pointer-events: none;
+	height: 100%;
+	overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -711,8 +717,8 @@ a:hover, a:active {
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: black;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: #297cbb;
+	background-color: rgba(41, 124, 187, 0.9);
 	overflow-y: hidden;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
@@ -765,6 +771,7 @@ a:hover, a:active {
 }
 
 .open-nav {
+	pointer-events: all;
 	height: 100%;
 }
 
