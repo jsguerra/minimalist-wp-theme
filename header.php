@@ -38,17 +38,14 @@
 			<?php
 		endif; ?>
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation open-nav">
 			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'minimalist-wp' ); ?></button> -->
-			<div class="nav-mobile">
-				<a id="nav-toggle" href="#">
-					<span></span>
-				</a>
-			</div>
+			<a class="closebtn" href="#">&times;</a>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'container'		 => false,
 				) );
 			?>
 		</nav><!-- #site-navigation -->

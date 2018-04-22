@@ -1,13 +1,13 @@
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font__main;
 	font-weight: 400;
-	margin-bottom: 1rem;
+	line-height: 1.3;
+	margin-bottom: 1.2rem;
 	clear: both;
 }
 
 h1 {
 	font-size: 2em;
-	line-height: 1.1em;
 
 	@include breakpoint($size__tablet) {
 		font-size: 3em;
@@ -16,7 +16,6 @@ h1 {
 
 h2 {
 	font-size: 1.75rem;
-	line-height: 1.1em;
 
 	@include breakpoint($size__tablet) {
 		font-size: 2.25em;
@@ -25,7 +24,6 @@ h2 {
 
 h3 {
 	font-size: 1.3rem;
-	line-height: 1.1em;
 
 	@include breakpoint($size__tablet) {
 		font-size: 1.75em;
@@ -34,5 +32,4 @@ h3 {
 
 h4 {
 	font-size: 1.125rem;
-	line-height: 1.1em;
 }
