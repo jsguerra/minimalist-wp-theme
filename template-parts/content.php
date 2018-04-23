@@ -26,7 +26,9 @@
 				minimalist_wp_posted_on();
 				minimalist_wp_posted_by();
 				minimalist_wp_updated_on();
-				minimalist_wp_share_buttons();
+				if ( is_single() ) {
+					minimalist_wp_share_buttons();
+				}
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>

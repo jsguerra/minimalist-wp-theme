@@ -52,6 +52,19 @@
 			display: block;
 		}
 	}
+
+	.share-buttons {
+		display: block;
+		margin: 10px 0;
+
+		a {
+			margin-right: 5px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 .post,
