@@ -67,6 +67,33 @@ if ( ! function_exists( 'minimalist_wp_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'minimalist_wp_share_buttons' )) :
+	/**
+	 * Prints HTML links with Social Media Share Buttons.
+	 */
+	function minimalist_wp_share_buttons() {
+		// Get current page URL 
+		$minimalistURL = urlencode(get_permalink());
+ 
+		// Get current page title
+		$minimalistTitle = str_replace( ' ', '%20', get_the_title());
+
+		$twitterURL = 'https://twitter.com/intent/tweet?text='.$minimalistTitle.'&amp;url='.$minimalistURL.'&amp;via=JoseGuerraUK';
+		$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$minimalistURL;
+		$linkedInURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$minimalistURL.'&amp;title='.$minimalistTitle;
+
+		// Add sharing button at the end of page/page content
+		$shareButton = '<div class="share-buttons">';
+		$shareButton .= '<a class="icon icon-facebook" href="'.$facebookURL.'" target="_blank"></a>';
+		$shareButton .= '<a class="icon icon-twitter" href="'. $twitterURL .'" target="_blank"></a>';
+		$shareButton .= '<a class="icon icon-linkedin" href="'.$linkedInURL.'" target="_blank"></a>';
+		$shareButton .= '</div>';
+
+		// Print the Share Buttons
+		echo $shareButton;
+	}
+endif;
+
 if ( ! function_exists( 'minimalist_wp_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
