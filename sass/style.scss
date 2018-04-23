@@ -23,8 +23,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Bootstrap Reboot
+# Bootstrap Reboot & noscroll
 # Typography
+# Font Icons
 # Elements
 # Forms
 # Navigation
@@ -46,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "mixins/mixins-master";
 
 /*--------------------------------------------------------------
-# Normalize
+# Bootstrap Reboot & noscroll
 --------------------------------------------------------------*/
 // @import "normalize";
 @import "bootstrap-reboot";
@@ -56,6 +57,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";
+
+/*--------------------------------------------------------------
+# Font Icons
+--------------------------------------------------------------*/
+@import "font-icons/animation";
+@import "font-icons/minimalist-wp";
+@import "font-icons/minimalist-wp-codes";
+@import "font-icons/minimalist-wp-embedded";
+@import "font-icons/minimalist-wp-ie7";
+@import "font-icons/minimalist-wp-ie7-codes";
 
 /*--------------------------------------------------------------
 # Elements
