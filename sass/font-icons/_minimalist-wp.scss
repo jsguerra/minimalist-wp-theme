@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'minimalist-wp';
-  src: url('font/minimalist-wp.eot?46391900');
-  src: url('font/minimalist-wp.eot?46391900#iefix') format('embedded-opentype'),
-       url('font/minimalist-wp.woff2?46391900') format('woff2'),
-       url('font/minimalist-wp.woff?46391900') format('woff'),
-       url('font/minimalist-wp.ttf?46391900') format('truetype'),
-       url('font/minimalist-wp.svg?46391900#minimalist-wp') format('svg');
+  src: url('font/minimalist-wp.eot?54825643');
+  src: url('font/minimalist-wp.eot?54825643#iefix') format('embedded-opentype'),
+       url('font/minimalist-wp.woff2?54825643') format('woff2'),
+       url('font/minimalist-wp.woff?54825643') format('woff'),
+       url('font/minimalist-wp.ttf?54825643') format('truetype'),
+       url('font/minimalist-wp.svg?54825643#minimalist-wp') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'minimalist-wp';
-    src: url('../font/minimalist-wp.svg?46391900#minimalist-wp') format('svg');
+    src: url('../font/minimalist-wp.svg?54825643#minimalist-wp') format('svg');
   }
 }
 */
@@ -60,3 +60,5 @@
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
+.icon-youtube:before { content: '\f16a'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */

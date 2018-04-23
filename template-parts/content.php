@@ -27,6 +27,8 @@
 				minimalist_wp_posted_by();
 				minimalist_wp_updated_on();
 				?>
+				<br>
+				<i class="demo-icon icon-facebook"></i>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
