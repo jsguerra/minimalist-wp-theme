@@ -9,64 +9,28 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			minimalist_wp_category();
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
+<article id="post-<?php the_ID(); ?>" <?php post_class('item-article'); ?>>
+	<div class="entry-container">
+		<header class="entry-header">
+			<?php
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			?>
 			<div class="entry-meta">
 				<?php
-				minimalist_wp_posted_on();
-				minimalist_wp_posted_by();
-				minimalist_wp_updated_on();
-				if ( is_single() ) {
-					minimalist_wp_share_buttons();
-				}
+					minimalist_wp_posted_on();
+					minimalist_wp_posted_by();
+					minimalist_wp_updated_on();
 				?>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		</header><!-- .entry-header -->
 
-	<?php if ( is_home() || is_archive() ) { } else { minimalist_wp_post_thumbnail(); } ?>
-
-	<div class="entry-content">
-		<?php
-		if ( is_home() || is_archive() ) {
-			// the_excerpt();
-		} else {
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'minimalist-wp' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
-		}
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'minimalist-wp' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( is_home() || is_archive() ) {
-		// There is nothing to see
-	} else { ?>
-		<footer class="entry-footer">
-			<?php minimalist_wp_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
-	<?php } ?>
+		<div class="entry-content">
+			<?php
+				the_excerpt();
+			?>
+		</div><!-- .entry-content -->
+	</div>
+	<div class="entry-thumbnail">
+		<?php minimalist_wp_post_thumbnail(); ?>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
