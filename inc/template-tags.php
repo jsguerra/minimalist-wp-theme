@@ -164,7 +164,7 @@ if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function minimalist_wp_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
@@ -177,15 +177,19 @@ if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 
 		<?php else : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-			<?php
-			the_post_thumbnail( 'medium', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
-		</a>
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php
+					if ( has_post_thumbnail() ) :
+						the_post_thumbnail( 'medium', array(
+							'alt' => the_title_attribute( array(
+								'echo' => false,
+							) ),
+						) );
+					else :
+						echo '<img src="https://placehold.it/300x250/" alt="place holder" />';
+					endif;
+				?>
+			</a>			
 
 		<?php
 		endif; // End is_singular().
