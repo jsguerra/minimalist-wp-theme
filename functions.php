@@ -42,6 +42,7 @@ if ( ! function_exists( 'minimalist_wp_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'featured-img', 960, 540, true );
+		add_image_size( 'blog-thumb', 400, 300, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
