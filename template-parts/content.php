@@ -30,7 +30,20 @@
 			?>
 		</div><!-- .entry-content -->
 	</div>
-	<div class="entry-thumbnail">
-		<?php minimalist_wp_post_thumbnail(); ?>
+	
+	<?php
+		if ( has_post_thumbnail() ) {
+			$image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'blog-thumb' );
+			if ( ! empty( $image_url[0] ) ) {
+				$image_url = esc_url( $image_url[0] );
+			}
+		} else {
+			$image_url = get_template_directory_uri() . '/images/default-travel.jpg';
+		}
+	?>
+
+	<div class="entry-thumbnail" style="background-image: url('<?php echo $image_url; ?>');">
+		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true"></a>
 	</div>
+
 </article><!-- #post-<?php the_ID(); ?> -->
