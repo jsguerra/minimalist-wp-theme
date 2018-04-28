@@ -180,13 +180,13 @@ if ( ! function_exists( 'minimalist_wp_post_thumbnail' ) ) :
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 				<?php
 					if ( has_post_thumbnail() ) :
-						the_post_thumbnail( 'medium', array(
+						the_post_thumbnail( 'blog-thumb', array(
 							'alt' => the_title_attribute( array(
 								'echo' => false,
 							) ),
 						) );
 					else :
-						echo '<img src="https://placehold.it/300x250/" alt="place holder" />';
+						echo '<img src="https://placehold.it/400x300/" alt="place holder" />';
 					endif;
 				?>
 			</a>			
