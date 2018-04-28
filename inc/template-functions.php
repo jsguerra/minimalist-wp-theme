@@ -43,12 +43,15 @@ function minimalist_wp_custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'minimalist_wp_custom_excerpt_length', 999 );
 
 /**
- * Filter the excerpt "read more" string.
+ * Filter the "read more" excerpt string link to the post.
  *
  * @param string $more "Read more" excerpt string.
  * @return string (Maybe) modified "read more" excerpt string.
  */
 function minimalist_wp_excerpt_more( $more ) {
-    return ' ';
+    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'minimalist_wp' )
+    );
 }
 add_filter( 'excerpt_more', 'minimalist_wp_excerpt_more' );
