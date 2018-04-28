@@ -17,6 +17,7 @@
 		background-color: transparent;
 		overflow-y: unset;
 		flex: 1;
+		transition: none;
 	}
 
 	.closebtn {
@@ -77,6 +78,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		margin: 0;
+		transition: none;
 	}
 
 	a {
