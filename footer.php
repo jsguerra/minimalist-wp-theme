@@ -15,7 +15,10 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-footer-menus">
-			
+			<?php
+				wp_nav_menu( array( 'theme_location' => 'footer-menu' ) );
+				wp_nav_menu( array( 'theme_location' => 'social-menu' ) );
+			?>
 		</div>
 		<div class="site-info">
 			&copy; <?php echo date('Y'); ?> All Rights Reserved.
