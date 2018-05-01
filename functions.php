@@ -46,7 +46,9 @@ if ( ! function_exists( 'minimalist_wp_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'minimalist-wp' ),
+			'header-menu' => esc_html__( 'Header', 'minimalist-wp' ),
+			'footer-menu' => esc_html__( 'Footer', 'minimalist-wp' ),
+			'social-menu' => esc_html__( 'Social', 'minimalist-wp' ),
 		) );
 
 		/*
