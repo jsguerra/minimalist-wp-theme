@@ -84,9 +84,9 @@ if ( ! function_exists( 'minimalist_wp_share_buttons' )) :
 
 		// Add sharing button at the end of page/page content
 		$shareButton = '<div class="share-buttons">';
-		$shareButton .= '<a class="share icon icon-facebook" href="'.$facebookURL.'" data-network="facebook"></a>';
-		$shareButton .= '<a class="share icon icon-twitter" href="'. $twitterURL .'" data-network="twitter"></a>';
-		$shareButton .= '<a class="share icon icon-linkedin" href="'.$linkedInURL.'" data-network="linkedin"></a>';
+		$shareButton .= '<a class="share icon icon-facebook" href="'.$facebookURL.'" data-network="facebook"><span class="screen-reader-text">Share on Facebook</span></a>';
+		$shareButton .= '<a class="share icon icon-twitter" href="'. $twitterURL .'" data-network="twitter"><span class="screen-reader-text">Share on Twitter</span></a>';
+		$shareButton .= '<a class="share icon icon-linkedin" href="'.$linkedInURL.'" data-network="linkedin"><span class="screen-reader-text">Share on Linkedin</span></a>';
 		$shareButton .= '</div>';
 
 		// Print the Share Buttons
