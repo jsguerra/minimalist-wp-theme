@@ -14,12 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-footer-menus">
-			<?php
-				wp_nav_menu( array( 'theme_location' => 'footer-menu' ) );
-				wp_nav_menu( array( 'theme_location' => 'social-menu' ) );
-			?>
-		</div>
+		<?php if ( has_nav_menu( 'footer-menu' ) || has_nav_menu( 'social-menu' ) ) : ?>
+			<div class="site-footer-menus">
+				<?php
+					wp_nav_menu( array( 'theme_location' => 'footer-menu' ) );
+					wp_nav_menu( array( 'theme_location' => 'social-menu' ) );
+				?>
+			</div>
+		<?php endif; ?>
 		<div class="site-info">
 			&copy; <?php echo date('Y'); ?> All Rights Reserved.
 		</div><!-- .site-info -->
