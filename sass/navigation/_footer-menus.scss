@@ -1,0 +1,29 @@
+.site-footer-menus {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1170px;
+    margin: 0 auto 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color__background-offwhite;
+
+    @include breakpoint($size__tablet) {
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
