@@ -17,8 +17,8 @@
 		<?php if ( has_nav_menu( 'footer-menu' ) || has_nav_menu( 'social-menu' ) ) : ?>
 			<div class="site-footer-menus">
 				<?php
-					wp_nav_menu( array( 'theme_location' => 'footer-menu' ) );
-					wp_nav_menu( array( 'theme_location' => 'social-menu' ) );
+					wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer-menu-container', 'menu_id' => 'footer-menu' ) );
+					wp_nav_menu( array( 'theme_location' => 'social-menu', 'container_class' => 'footer-menu-container', 'menu_id' => 'social-menu' ) );
 				?>
 			</div>
 		<?php endif; ?>
