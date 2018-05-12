@@ -4,7 +4,7 @@
     justify-content: center;
     max-width: 1170px;
     margin: 0 auto 1rem;
-    padding: 1rem 0;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid $color__background-offwhite;
 
     @include breakpoint($size__tablet) {
