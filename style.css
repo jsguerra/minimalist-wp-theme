@@ -867,7 +867,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 2px solid;
-	border-color: #297cbb;
+	border-color: #2775B0;
 	border-radius: 3px;
 	background: transparent;
 	color: rgba(0, 0, 0, 0.8);
@@ -990,11 +990,11 @@ textarea {
 ## Menus and links
 --------------------------------------------------------------*/
 a {
-	color: #297cbb;
+	color: #2775B0;
 }
 
 a:visited {
-	color: #297cbb;
+	color: #2775B0;
 }
 
 a:hover, a:focus, a:active {
@@ -1063,7 +1063,7 @@ a:hover, a:active {
 }
 
 .openbtn a {
-	color: #297cbb;
+	color: #2775B0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1122,7 +1122,7 @@ a:hover, a:active {
 
 @media screen and (min-width: 768px) {
 	#primary-menu a {
-		color: #297cbb;
+		color: #2775B0;
 	}
 }
 
@@ -1444,7 +1444,7 @@ a:hover, a:active {
 
 .site-footer {
 	font-size: 1rem;
-	background-color: #297cbb;
+	background-color: #2775B0;
 	color: white;
 	padding: 2rem 0;
 	text-align: center;
@@ -1567,7 +1567,7 @@ a:hover, a:active {
 	margin-top: 1rem;
 	padding: 0.5rem 1rem;
 	text-align: center;
-	border: 1px solid #297cbb;
+	border: 1px solid #2775B0;
 }
 
 .sticky {
@@ -1829,8 +1829,8 @@ a:hover, a:active {
 
 .reply a:hover, .reply a:focus {
 	color: #fff;
-	background: #297cbb;
-	border-color: #297cbb;
+	background: #2775B0;
+	border-color: #2775B0;
 }
 
 .comment-content ol {
@@ -1844,7 +1844,7 @@ a:hover, a:active {
 .bypostauthor .avatar {
 	-webkit-box-sizing: content-box;
 	        box-sizing: content-box;
-	border: 3px solid #297cbb;
+	border: 3px solid #2775B0;
 	margin-top: -3px;
 	margin-left: -3px;
 }
@@ -1885,8 +1885,8 @@ a:hover, a:active {
 
 .comment-form .form-submit input:hover, .comment-form .form-submit input:focus {
 	color: #fff;
-	background: #297cbb;
-	border-color: #297cbb;
+	background: #2775B0;
+	border-color: #2775B0;
 }
 
 .comment-form label {
