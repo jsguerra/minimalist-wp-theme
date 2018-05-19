@@ -1127,18 +1127,15 @@ a:hover, a:active {
 }
 
 #primary-menu ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	height: 0;
 }
 
 #primary-menu ul ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	height: 0;
 }
 
 #primary-menu li {
@@ -1154,6 +1151,44 @@ a:hover, a:active {
 
 #primary-menu li:last-child {
 	margin-right: 0;
+}
+
+#primary-menu li a {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+#primary-menu .menu-item-has-children {
+	position: relative;
+}
+
+#primary-menu .menu-item-has-children .sub-menu {
+	display: none;
+}
+
+#primary-menu .menu-item-has-children .sub-menu li {
+	margin-right: 0;
+}
+
+#primary-menu .menu-item-has-children .sub-menu a {
+	display: block;
+	padding: 0.5rem 1rem;
+}
+
+#primary-menu .menu-item-has-children .sub-menu a:hover, #primary-menu .menu-item-has-children .sub-menu a:focus {
+	background-color: #e1e8ef;
+}
+
+#primary-menu .menu-item-has-children:hover > .sub-menu {
+	position: absolute;
+	right: 0;
+	top: 36px;
+	display: block;
+	background-color: #f2f5f8;
+	width: auto;
+	height: auto;
+	text-align: left;
+	white-space: nowrap;
 }
 
 .comment-navigation,
