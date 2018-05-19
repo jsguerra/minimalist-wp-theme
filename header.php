@@ -48,6 +48,7 @@
 					'theme_location' => 'header-menu',
 					'menu_id'        => 'primary-menu',
 					'container'		 => false,
+					'depth'			 => 2,
 				) );
 			?>
 		</nav><!-- #site-navigation -->
