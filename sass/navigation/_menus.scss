@@ -7,7 +7,7 @@
     left: 0;
     background-color: rgb(41, 124, 187);
     background-color: rgba(41, 124, 187, 0.9);
-    overflow-y: hidden;
+    overflow-y: auto;
     transition: 0.5s;
 	// flex: 1;
 
@@ -63,10 +63,10 @@
 	font-size: 1.5rem;
 	list-style: none;
 	margin: 1rem 0 0 0;
-	padding-left: 0;
+	// padding-left: 0;
 	height: 0;
 	transition: all 1s ease-in-out;
-	text-align: center;
+	// text-align: center;
 
 	@include breakpoint($size__tablet) {
 		font-size: 1rem;
@@ -92,7 +92,7 @@
 	ul {
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding-left: 1.2rem;
 
 		ul {
 			list-style: none;
@@ -123,10 +123,18 @@
 		position: relative;
 
 		.sub-menu {
-			display: none;
+			font-size: 1.2rem;
+
+			@include breakpoint($size__tablet) {
+				display: none;
+			}
 
 			li {
-				margin-right: 0;
+				margin-bottom: 0;
+
+				@include breakpoint($size__tablet) {
+					margin-right: 0;
+				}
 			}
 
 			a {
@@ -135,21 +143,29 @@
 
 				&:hover,
 				&:focus {
-					background-color: darken($color__background-offwhite, 5%);
+
+					@include breakpoint($size__tablet) {
+						background-color: darken($color__background-offwhite, 5%);
+					}
 				}
 			}
 		}
 
 		&:hover > .sub-menu {
-			position: absolute;
-			   right: 0;
-				 top: 36px;
-			display: block;
-			background-color: $color__background-offwhite;
-			width: auto;
-			height: auto;
-			text-align: left;
-			white-space: nowrap;
+
+			@include breakpoint($size__tablet) {
+				font-size: 1rem;
+				position: absolute;
+				   right: 0;
+				     top: 35px;
+				display: block;
+				background-color: $color__background-offwhite;
+				width: auto;
+				height: auto;
+				text-align: left;
+				white-space: nowrap;
+				padding-left: 0;
+			}
 		}
 	}
 }
