@@ -982,6 +982,7 @@ textarea {
 	    -ms-flex: 1 0;
 	        flex: 1 0;
 	font-size: 1em;
+	line-height: 1.5;
 	margin: 0;
 	margin-right: auto;
 }
@@ -1019,7 +1020,7 @@ a:hover, a:active {
 	left: 0;
 	background-color: #297cbb;
 	background-color: rgba(41, 124, 187, 0.9);
-	overflow-y: hidden;
+	overflow-y: auto;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 }
@@ -1084,11 +1085,9 @@ a:hover, a:active {
 	font-size: 1.5rem;
 	list-style: none;
 	margin: 1rem 0 0 0;
-	padding-left: 0;
 	height: 0;
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
-	text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1129,7 +1128,7 @@ a:hover, a:active {
 #primary-menu ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
+	padding-left: 1.2rem;
 }
 
 #primary-menu ul ul {
@@ -1163,11 +1162,23 @@ a:hover, a:active {
 }
 
 #primary-menu .menu-item-has-children .sub-menu {
-	display: none;
+	font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+	#primary-menu .menu-item-has-children .sub-menu {
+		display: none;
+	}
 }
 
 #primary-menu .menu-item-has-children .sub-menu li {
-	margin-right: 0;
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	#primary-menu .menu-item-has-children .sub-menu li {
+		margin-right: 0;
+	}
 }
 
 #primary-menu .menu-item-has-children .sub-menu a {
@@ -1175,20 +1186,26 @@ a:hover, a:active {
 	padding: 0.5rem 1rem;
 }
 
-#primary-menu .menu-item-has-children .sub-menu a:hover, #primary-menu .menu-item-has-children .sub-menu a:focus {
-	background-color: #e1e8ef;
+@media screen and (min-width: 768px) {
+	#primary-menu .menu-item-has-children .sub-menu a:hover, #primary-menu .menu-item-has-children .sub-menu a:focus {
+		background-color: #e1e8ef;
+	}
 }
 
-#primary-menu .menu-item-has-children:hover > .sub-menu {
-	position: absolute;
-	right: 0;
-	top: 36px;
-	display: block;
-	background-color: #f2f5f8;
-	width: auto;
-	height: auto;
-	text-align: left;
-	white-space: nowrap;
+@media screen and (min-width: 768px) {
+	#primary-menu .menu-item-has-children:hover > .sub-menu {
+		font-size: 1rem;
+		position: absolute;
+		right: 0;
+		top: 35px;
+		display: block;
+		background-color: #f2f5f8;
+		width: auto;
+		height: auto;
+		text-align: left;
+		white-space: nowrap;
+		padding-left: 0;
+	}
 }
 
 .comment-navigation,
@@ -1625,6 +1642,11 @@ a:hover, a:active {
 		    -ms-flex-flow: row-reverse;
 		        flex-flow: row-reverse;
 	}
+}
+
+.archive-description {
+	margin-bottom: 2rem;
+	padding: 0 1rem;
 }
 
 /*--------------------------------------------------------------
